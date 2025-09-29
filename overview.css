@@ -1,0 +1,169 @@
+/* Reset margins */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(127, 255, 163);
+}
+
+/* Centered Title */
+h1 {
+    text-align: center;
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Position the logo in the top-right corner */
+}
+.logo img {
+    width: 40px; /* Adjust size as needed */
+    cursor: pointer;
+}
+
+/* Navbar */
+.navbar ul {
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: hsl(0, 0%, 10%);
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.exercise-table, .quiz-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.exercise-table th, .exercise-table td,
+.quiz-table th, .quiz-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.exercise-table th, .quiz-table th {
+    background-color: #7f8388;
+    color: white;
+}
+
+.exercise-name, .quiz-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease-in-out;
+ 
+}
+
+.remove-btn:hover {
+    background: darkred;
+}
+
+.start-btn {
+    background: #007bff;
+    color: rgb(6, 6, 6);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    width: 90px;
+    height: 60px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.start-btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.remove-btn:hover {
+    background: darkred;
+    transform: scale(1.1); /* Button slightly grows */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Adds a small shadow */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ensures centering in viewport */
+}
+
+.container {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exercise-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

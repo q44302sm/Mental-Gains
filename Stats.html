@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <link rel="stylesheet" href="Stats.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img\logo.png" alt="Logo" onclick="window.location.href='profile.html'">
+        </div>
+        <h1>Stats</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="mainPage.html">Home</a></li>
+            <li><a href="ExercisePage.html">Exercises</a></li>
+            <li><a href="QuizPage.html">Quiz</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="Stats.html">Stats</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <div class="container">
+            <!-- Sidebar: Categories -->
+            <aside class="sidebar">
+                <h2>Categories</h2>
+                <ul id="category-list">
+                    <li data-category="exercises" class="active">Exercises</li>
+                    <li data-category="quizzes">Quizzes</li>
+                </ul>
+            </aside>
+
+            <!-- Stats Display Area -->
+            <section class="stats-container">
+                <h2 id="stats-title">Exercise Stats</h2>
+                <div id="stats-list">
+                    <!-- Stats will be dynamically inserted here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="Stats.js"></script>
+</body>
+</html>

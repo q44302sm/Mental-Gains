@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+    <script src="leaderboard.js" defer></script>
+</head>
+<body>
+    <button onclick="goToMainPage()" class="return-btn">⬅ Return</button> <!-- Moved to Top-Left -->
+    <div class="container">
+        <h1>Quiz Leaderboard</h1>
+        <button onclick="changeQuizSort('accuracy')">Sort by Accuracy</button>
+        <button onclick="changeQuizSort('questions')">Sort by Questions Completed</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th id="quizMetric">Accuracy (%)</th>
+                </tr>
+            </thead>
+            <tbody id="quizLeaderboard"></tbody>
+        </table>
+    </div>
+</body>
+</html>

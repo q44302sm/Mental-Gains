@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+    <script src="leaderboard.js" defer></script>
+</head>
+<body>
+    <button onclick="goToMainPage()" class="return-btn">⬅ Return</button> <!-- Moved to Top-Left -->
+    <div class="container">
+        <h1>Exercise Leaderboard</h1>
+        <button onclick="changeExerciseSort('time')">Sort by Total Time</button>
+        <button onclick="changeExerciseSort('completed')">Sort by Exercises Completed</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th id="exerciseMetric">Total Time (minutes)</th>
+                </tr>
+            </thead>
+            <tbody id="exerciseLeaderboard"></tbody>
+        </table>
+    </div>
+</body>
+</html>

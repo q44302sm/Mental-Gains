@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview Page</title>
+    <link rel="stylesheet" href="overview.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img\logo.png" alt="Logo" onclick="window.location.href='profile.html'">
+        </div>
+        <h1>Overview Page</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="mainPage.html">Home</a></li>
+            <li><a href="ExercisePage.html">Exercises</a></li>
+            <li><a href="QuizPage.html">Quiz</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="Stats.html">Stats</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <!-- Overview Display Area -->
+            <section class="exercise-container">
+                <h2>Session Overview</h2>
+                
+                <h2>Selected Exercises</h2>
+                <table class="exercise-table">
+                    <thead>
+                        <tr>
+                            <th>Exercise</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="exercise-list">
+                        <!-- Exercises will be dynamically added here -->
+                    </tbody>
+                </table>
+
+                <h2>Selected Quizzes</h2>
+                <table class="quiz-table">
+                    <thead>
+                        <tr>
+                            <th>Quiz</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="quiz-list">
+                        <!-- Quizzes will be dynamically added here -->
+                    </tbody>
+                </table>
+                
+                <button onclick="window.location.href='workoutpage.html'" class="start-btn">Start</button>
+            </section>
+        </div>
+    </main>
+
+    <script src="overview.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* Reset margins */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(127, 255, 163);
+}
+
+/* Centered Title */
+h1 {
+    text-align: center;
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Position the logo in the top-right corner */
+}
+.logo img {
+    width: 40px; /* Adjust size as needed */
+    cursor: pointer;
+}
+
+/* Navbar */
+.navbar ul {
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: hsl(0, 0%, 10%);
+}
+
+/* Main Layout */
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #f8f8f8;
+    padding: 20px;
+    border-right: 2px solid #ccc;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li.active {
+    background: gold;
+    font-weight: bold;
+}
+
+/* Exercise Container */
+/* Exercise Container */
+.exercise-container {
+    flex-grow: 1;
+    padding: 20px;
+    background: #006400;
+    color: white;
+    border-radius: 10px;
+    display: flex; /* Use Flexbox */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 20px; /* Add space between exercises */
+}
+
+/* Exercise Items */
+#exercise-list {
+    display: flex; /* Use Flexbox for the list of exercises */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 20px; /* Add space between exercises */
+}
+
+.exercise {
+    width: 230px; /* Set a fixed width for each exercise */
+    padding: 15px;
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Optional: You can remove this if you want to rely on the gap property */
+}
+
+.exercise img {
+    width: 150px;  /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: contain; /* Keeps aspect ratio, fits within the box */
+    border-radius: 10px; /* Optional: rounded corners */
+    display: block;
+    margin: 0 auto; /* Centers the images */
+    background-color: white; /* Optional: adds a background if images are transparent */
+}
+
+
+
+.add-to-session {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-session:hover {
+    background-color: #0056b3;
+}

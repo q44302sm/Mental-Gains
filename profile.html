@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="profile.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+    <button onclick="goToMainPage()" class="return-btn">⬅ Return</button>
+    <div class="profile-container">
+        <!-- Left Side: Fixed Profile Info -->
+        <div class="profile-left animate-fade">
+            <div class="profile-card">
+                <img src="img/Profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h2 id="username">John Doe</h2>
+                <p><strong>Date of Birth:</strong> <span id="dob">2000-01-01</span></p>
+                <p><strong>Email:</strong> <span id="email">johndoe@example.com</span></p>
+                <p><strong>Phone:</strong> <span id="phone">123-456-7890</span></p>
+                <button onclick="editProfile()" class="edit-btn">✏ Edit Profile</button>
+                <a href="log_out"><button class="logout-btn">Log out</button></a>
+            </div>
+        </div>
+
+        <!-- Right Side: Scrollable Statistics -->
+        <div class="profile-right animate-slide">
+            <h2>📊 Exercise & Quiz Statistics</h2>
+
+            <!-- Total Exercises Done (Floating Effect) -->
+            <div class="stat-card">
+                <p class="stat-title">Total Exercises Done</p>
+                <span class="stat-number" id="totalExercises">50</span>
+            </div>
+
+            <!-- Longest Streak (Flip Card) -->
+            <div class="stat-card">
+                <div class="stat-inner">
+                    <div class="stat-front">
+                        <p class="stat-title">Longest Streak</p>
+                        <span class="stat-number" id="longestStreak">15</span> days
+                    </div>
+                    <div class="stat-back">
+                        <p>🔥 Keep Going! Your next goal is 20 days! 🔥</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Average Accuracy (Floating Icon) -->
+            <div class="stat-card">
+                <p class="stat-title">Average Accuracy</p>
+                <span class="stat-number" id="avgAccuracy">85%</span>
+                <i class="stat-icon fas fa-check-circle"></i> <!-- Floating Icon -->
+            </div>
+
+            <!-- Total Quizzes Completed (Floating Effect) -->
+            <div class="stat-card">
+                <p class="stat-title">Total Quizzes Completed</p>
+                <span class="stat-number" id="totalQuizzes">120</span>
+            </div>
+
+            <!-- Best Quiz Score (Floating Icon) -->
+            <div class="stat-card">
+                <p class="stat-title">Best Quiz Score</p>
+                <span class="stat-number" id="bestScore">98%</span>
+                <i class="stat-icon fas fa-star"></i> <!-- Floating Icon -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

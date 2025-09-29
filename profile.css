@@ -1,0 +1,260 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(127, 255, 163);
+    color: black;
+    background-attachment: fixed;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Left Side (Fixed Profile Info) */
+.profile-left {
+    width: 28%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Right Side (Scrollable Statistics) */
+.profile-right {
+    margin-left: 30%;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    width: 70%;
+}
+
+/* Stats Cards (Larger Text) */
+.stat-card {
+    background: rgb(0, 128, 0); /* Changed to green */
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1.6rem; /* Larger Text */
+    width: 90%;
+    height: 200px; /* Increased Height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    text-align: center;
+}
+
+/* Floating Effect for Total Exercises & Total Quizzes */
+.stat-card:nth-child(2):hover,
+.stat-card:nth-child(5):hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 4px 15px rgb(0, 128, 0); /* Adjusted shadow color */
+}
+
+/* Floating Icons for Accuracy & Best Score */
+.stat-card:nth-child(4),
+.stat-card:nth-child(6) {
+    position: relative;
+}
+
+.stat-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2.5rem;
+    color: #ffcc00;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.stat-card:nth-child(4):hover .stat-icon,
+.stat-card:nth-child(6):hover .stat-icon {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Flip Card Effect for Longest Streak */
+.stat-card:nth-child(3) {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.stat-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-card:nth-child(3):hover .stat-inner {
+    transform: rotateY(180deg);
+}
+
+.stat-front, .stat-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem; /* Increased Font Size */
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-back {
+    background: rgb(1, 176, 1); /* Changed to green */
+    color: #333;
+    transform: rotateY(180deg);
+    border-radius: 12px;
+}
+
+/* Bigger Stat Titles */
+.stat-title {
+    font-size: 1.8rem; /* Bigger Title */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Larger Number Display */
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+    text-shadow: 2px 2px 10px rgba(0, 128, 0, 0.5); /* Adjusted shadow color */
+}
+
+.return-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.return-btn:hover {
+    background-color: #0056b3;
+}
+
+.edit-btn {
+    top: 555px;
+    right: 200px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.logout-btn {
+    top: 555px;
+    right: 60px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Centering the Edit Container */
+.edit-container {
+    width: 40%;
+    margin: 10vh auto; /* Centers it vertically */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Ensuring Labels and Inputs Align Properly */
+.edit-container label {
+    display: block;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* Styling Input Fields */
+.edit-container input {
+    width: 95%; /* Ensures consistent width */
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    display: block;
+}
+
+/* Adjusting Buttons */
+.save-btn, .cancel-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Save Button */
+.save-btn {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+}
+
+.save-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Cancel Button */
+.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}

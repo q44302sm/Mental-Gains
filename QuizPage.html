@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="QuizPage.css">
+</head>
+<body>
+
+    
+    <header>
+        <div class="logo">
+            <img src="img\logo.png" alt="Logo" onclick="window.location.href='profile.html'">
+        </div>
+        <h1>Quiz Page</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="mainPage.html">Home</a></li>
+            <li><a href="ExercisePage.html">Exercises</a></li>
+            <li><a href="QuizPage.html">Quiz</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="Stats.html">Stats</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <div class="container">
+            <!-- Sidebar: Courses -->
+            <aside class="sidebar">
+                <h2>CS Courses</h2>
+                <ul id="course-list">
+                    <li data-course="Comp11120">Comp11120</li>
+                    <li data-course="Comp11212">Comp11212</li>
+                    <li data-course="Comp12111">Comp12111</li>
+                    <li data-course="Comp13212">Comp13212</li>
+                    <li data-course="Comp15111" class="active">Comp15111</li>
+                    <li data-course="Comp15212">Comp15212</li>
+                    <li data-course="Comp16321">Comp16321</li>
+                    <li data-course="Comp16421">Comp16421</li>
+                </ul>
+            </aside>
+    
+            <!-- Quiz Display Area -->
+            <section class="quiz-container">
+                <h2 id="quiz-title">Comp15111 Quizzes</h2>
+                <div id="quiz-list">
+                    <div class="quiz">
+                        <p>Quiz 1: Programming Fundamentals</p>
+                    </div>
+                    <div class="quiz">
+                        <p>Quiz 2: Object-Oriented Programming</p>
+                    </div>
+                    <div class="quiz">
+                        <p>Quiz 3: Data Structures</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="QuizPage.js"></script>
+
+</body>
+</html>
